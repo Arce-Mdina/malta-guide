@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.travel-visit {
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.travel-visit:hover {
+  color:rgb(255, 30, 75);
+  background-color:rgb(242, 242, 242);
+}
+
+.citation {
+  font-style: italic;
+}
+
+.landmarks {
+  width:85vw;
+}
+
+.btn-desc {
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+@media (max-width:900px) {
+  .btn-desc {
+    background-color: yellow;
+  }
+}
+
+.link-buttons {
+  width:300px;
+  margin-top:20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* place-self: center; */
+  /* align-self: center; */
+  margin:auto;
+}
+
+.landmark-image {
+  overflow: hidden;
+  height:250px;
+  top:0;
+  left:0;
+  right:0;
+}
+
+.link-1, .link-2 {
+  /* padding:15px; */
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius:30px;
+  font-weight: bold;
+  font-size:17px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in;
+}
+
+.link-1 {
+  background-color:crimson;
+  color:white;
+  border:1.5px solid white;
+}
+
+.link-1:hover {
+  background-color: rgb(241, 37, 78);
+}
+
+.link-2 {
+  background-color:rgb(245, 245, 245);
+  color:black;
+  border:1.5px solid white;
+}
+
+.link-2:hover {
+  background-color:rgb(238, 238, 238);
+  border:1.5px solid dodgerblue ;
+}
+
+@media (max-width:500px) {
+  .link-buttons {
+    width:250px;
+  }
+
+  .link-1, .link-2 {
+    padding-top:7px;
+    padding-bottom: 7px;
+    padding-left:17px;
+    padding-right:17px;
+    border-radius:17px;
+    font-size:15px;
+  }
+}
+
+
+/* 
+.link-1 {
+  margin-right:66px;
+} */
+
+.coat-of-arms {
+  width: 15vw;
+}
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.back-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border:none;
+  background-color:white;
+  border-radius:10px;
+}
+
+.back-button button:hover {
+  background-color: rgb(227, 227, 227);
+}
+
+.next-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.next-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border:none;
+  background-color:white;
+  border-radius:10px;
+}
+
+.next-button button:hover {
+  background-color: rgb(227, 227, 227);
+}
+
+.next-button button:hover .btn-desc {
+  display:block;
+}
+
+.influence-card-heading {
+  color:rgb(173, 116, 41);
+  transition: 0.3s ease-in;
+}
+
+.influence-card-heading:hover {
+  color: forestgreen;
+}
+
+.influence-card-heading-2 {
+  /* color:steelblue; */
+  color:darkblue;
+  transition: 0.3s ease-in;
+}
+
+.influence-card-heading-2:hover {
+  color:rgb(26, 115, 204) ;
+}
+
+.city-card {
+  position: relative;
+  border-radius: 16px;
+  border: 0.1px solid gray;
+  width: 60vw;
+  margin-bottom: 25px;
+  height:300px;
+  cursor: pointer;
+  overflow: hidden; /* To clip the cover to the card's border radius */
+  transition: 0.3s ease-in;
+  /* display:flex; */
+
+  background-size: cover; /* Ensures the background image covers the card area */
+  background-position:top center; /* Centers the image within the card */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+}
+
+.city-card:hover {
+  box-shadow: 5px 10px 15px #cf142bff;
+}
+
+.city-card .image {
+  width:60vw;
+  border-radius: 16px; /* Match the card's border radius */
+}
+
+.city-card .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark cover */
+  border-radius: 16px; /* Match the card's border radius */
+}
+
+.city-card h2 {
+  position: absolute; /* To position it over the cover */
+  bottom: 10px; /* Adjust as needed */
+  left: 30px;
+  margin: 0; /* Reset margin */
+  color: white; /* Ensure text is visible */
+  z-index: 1; /* Bring the heading in front of the cover */
+  font-size:2.5em;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column; /* Stack the cards vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-grid-triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid-double {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.landmark-card {
+  display: flex;
+  flex-direction: column;
+  border: 0.3px solid rgb(197, 197, 197);
+  margin-bottom: 35px;
+  border-radius: 16px;
+  overflow:hidden;
+  margin-right: 10px ;
+  margin-left: 10px ;
+}
+
+.visit-card {
+  display: flex;
+  flex-direction: column;
+  border: 0.2px solid rgb(197, 197, 197);
+  margin-bottom: 35px;
+  border-radius: 16px;
+  overflow:hidden;
+  margin-right: 10px ;
+  margin-left: 10px ;
+  padding:7px;
+}
+
+.visit {
+  width:83vw;
+}
+
+.airline-card {
+  display: flex;
+  flex-direction: column;
+  border: 0.3px solid rgb(197, 197, 197);
+  margin-bottom: 35px;
+  border-radius: 16px;
+  overflow:hidden;
+  margin-right: 10px ;
+  margin-left: 10px ;
+  padding:7px;
+  transition: 0.3s ease-in;
+}
+
+.airline-link {
+  text-decoration: none;
+  color:black;
+  transition: 0.3s ease-in;
+}
+
+.airline-link:hover {
+
+  color:white;
+}
+
+.airline-card:hover {
+  background-color:dodgerblue;
+}
+
+.history-heading {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; 
+  background-color: white;
+  padding-bottom: 30px;
+  padding-top: 30px
+}
+
+@media (max-width:900px) {
+  .city-card {
+    width:80vw;
+  }
+
+  .coat-of-arms {
+    width:30vw;
+  }
+
+  .card-grid-triple {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:600px) {
+  .history-heading {
+    font-size:2em;
+  }
+
+  .card-grid-double {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width:425px) {
+  .coat-of-arms {
+    width:25vw;
+  }
+
+  .card-grid-triple {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.heading {
+  font-family: "EB Garamond";
+}
+
+.heading-desc {
+  font-family: "Roboto Mono"
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
