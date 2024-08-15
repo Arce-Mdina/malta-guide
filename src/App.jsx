@@ -1,6 +1,8 @@
 import './App.css'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 
+import { Analytics } from "@vercel/analytics/react"
+
 import ScrollToTop from './components/ScrollToTop'
 
 import BackButton from './components/BackButton'
@@ -80,6 +82,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <ScrollToTop />
+        <Analytics />
         <RouterConfig />
       </BrowserRouter>
     </>
