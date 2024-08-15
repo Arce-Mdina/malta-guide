@@ -78,7 +78,7 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter basename="/malta-guide">
+      <BrowserRouter>
         <ScrollToTop />
         <RouterConfig />
       </BrowserRouter>
