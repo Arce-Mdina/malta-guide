@@ -8,7 +8,8 @@ const BackButton = () => {
     return (
         <div className="back-button">
             <button onClick={() => navigate(-1)}>
-                <span style={{ color: "dodgerblue" }}>&#x2190;</span>&nbsp;Back
+                <span style={{ color: "dodgerblue" }}>&#x2190;</span>&nbsp;
+                <span style={{ color: "black" }}>Back</span>
             </button>
         </div>
     );
